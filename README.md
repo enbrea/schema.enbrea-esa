@@ -1,20 +1,17 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# ENBREA Export Format for Student Applications (ENBREA ESA-Format)
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Das ENBREA Export Format for Student Applications (kurz ENBREA ESA-Format) dient zum Exportieren von Bewerberdaten in ein CSV-Datei. Diese kann u.a. dafür genutzt werden, um ein externes Bewerberverfahren durchzuführen und das Ergebnis wieder nach ENBREA zu übertragen.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Das ENBREA ESA-Format besteht aus einber singulären CSV-Datei, die mit Hilfe von [Simple CSV Schema](https://github.com/simple-csv-schema/simple-csv-schema.spec) formal spezifiziert ist. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Dokumentation
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Das Schema der ENBREA ESA-Datei [findest Du hier](src).
+
+## Kann ich mithelfen?
+
+Ja, sehr gerne. Der beste Weg mitzuhelfen ist es, Rückmeldung per Issue-Tracker zu geben und/oder eigene Pull-Requests zu generieren. Oder schreibe uns einfach eine E-Mail unter enbrea@stueber.de.
+
+## Code of conduct (Verhaltensregeln)
+
+In diesem Projekt wurde der [STÜBER SYSTEMS Code of conduct](https://www.stueber.de/code-of-conduct.php) übernommen.

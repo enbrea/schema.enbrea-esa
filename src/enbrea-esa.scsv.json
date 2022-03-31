@@ -1,0 +1,379 @@
+{
+  "title": "ENBREA ESA-Datei",
+  "description": "CSV-Schema für das ENBREA Export Format for Student Applications (ENBREA ESA-Format)",
+  "table": {
+    "type": "unordered",
+    "columns": [
+      {
+        "name": "ProcessId",
+        "description": "Id des Bewerberverfahrens (darf nicht geändert werden, wichtig für den Import)",
+        "type": "string",
+        "format": "uuid"
+      },
+      {
+        "name": "ApplicationId",
+        "description": "Id der Bewerbung (darf nicht geändert werden, wichtig für den Import)",
+        "type": "string",
+        "format": "uuid"
+      },
+      {
+        "name": "Timepoint",
+        "description": "Zeitpunkt der Bewerbung",
+        "type": "date-time",
+        "formats": [
+          "yyyy-MM-dd'T'HH:mm:ss",
+          "yyyy-MM-dd'T'HH:mm",
+          "yyyy-MM-dd"
+        ]
+      },
+      {
+        "name": "Status",
+        "description": "Bewerbungsstatus (kann wieder imporiert werden)",
+        "type": "enum",
+        "members": [
+          {
+            "value": "Applied",
+            "description": "Bewerbung eingereicht"
+          },
+          {
+            "value": "Pending",
+            "description": "Auf Warteliste"
+          },
+          {
+            "value": "Accepted",
+            "description": "Angenommen von der Schule"
+          },
+          {
+            "value": "Rejected",
+            "description": "Abgelehnt von der Schule"
+          },
+          {
+            "value": "Retired",
+            "description": "Zurückgezogen vom Bewerber"
+          }
+        ]
+      },
+      {
+        "name": "Rank",
+        "description": "Rang bzw. Position der Bewerbung (kann wieder imporiert werden)",
+        "type": "int",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Score",
+        "description": "Punktestand der Bewerbung (kann wieder imporiert werden)",
+        "type": "int",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Bonus (kann wieder imporiert werden)",
+        "description": "Optionaler Bonuswert, der zum Punktestand der Bewerbung addiert werden kann",
+        "type": "int",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "BonusDescription (kann wieder imporiert werden)",
+        "description": "Kurze Begründung des Bonuswertes",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "LastName",
+        "description": "Nachname des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "MiddleName",
+        "description": "Mittelname des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "FirstName",
+        "description": "Vorname des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Birthdate",
+        "description": "Geburtstag des Bewerbers",
+        "type": "date",
+        "formats": [
+          "yyyy-MM-dd"
+        ],
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Gender",
+        "description": "Geschlecht des Bewerbers",
+        "type": "enum",
+        "members": [
+          {
+            "value": "Male",
+            "description": "Männlich"
+          },
+          {
+            "value": "Female",
+            "description": "Weiblich"
+          },
+          {
+            "value": "Diverse",
+            "description": "Divers"
+          }
+        ],
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "AddressLines",
+        "description": "Adresszeile (Straße, Hausnummer, etc.)",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "PostalCode",
+        "description": "Postleitzahl",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Locality",
+        "description": "Wohnort",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Country",
+        "description": "Land",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EmailAddress",
+        "description": "E-Mail-Adresse des Bewerbers",
+        "type": "string",
+        "format": "email",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "FirstLanguage",
+        "description": "Muttersprache des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "CorrespondenceLanguage",
+        "description": "Verkehrssprache des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Nationality1",
+        "description": "1. Nationalität des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Nationality2",
+        "description": "2. Nationalität des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Nationality3",
+        "description": "3. Nationalität des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "Religion",
+        "description": "Religionszugehörigkeit des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "CountryArrivalDate",
+        "description": "Immigrationsdatum des Bewerbers",
+        "type": "date",
+        "formats": [
+          "yyyy-MM-dd"
+        ],
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "LateRepatriate",
+        "description": "Ist der Bewerber Spätaussiedler?",
+        "type": "bool",
+        "trueValues": [
+          "true"
+        ],
+        "falseValues": [
+          "false"
+        ],
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "AssessmentByStudent",
+        "description": "Einschätzung des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "AssessmentByTeacher",
+        "description": "Einschätzung des Lehrers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_1",
+        "description": "1. Fremdsprache des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_1_Start",
+        "description": "1. Fremdsprache ab welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_1_End",
+        "description": "1. Fremdsprache bis welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_2",
+        "description": "2. Fremdsprache des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_2_Start",
+        "description": "2. Fremdsprache bis welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_2_End",
+        "description": "2. Fremdsprache bis welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_3",
+        "description": "3. Fremdsprache des Bewerbers",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_3_Start",
+        "description": "3. Fremdsprache bis welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ForeignLanguage_3_End",
+        "description": "3. Fremdsprache bis welcher Klassenstufe?",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_1",
+        "description": "1. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_2",
+        "description": "2. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_3",
+        "description": "3. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentSupport_1",
+        "description": "1. Einschulunterstützung",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentSupport_2",
+        "description": "2. Einschulunterstützung",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentSupport_3",
+        "description": "3. Einschulunterstützung",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentType_1",
+        "description": "1. Einschulmerkmal",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentType_2",
+        "description": "2. Einschulmerkmal",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "EnrollmentType_3",
+        "description": "3. Einschulmerkmal",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      }
+    ]
+  }
+}
