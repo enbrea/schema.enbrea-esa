@@ -5,7 +5,7 @@
     "type": "unordered",
     "columns": [
       {
-        "name": "ProcessId",
+        "name": "ApplicationProcessId",
         "description": "Id des Bewerberverfahrens (darf nicht geändert werden, wichtig für den Import)",
         "type": "string",
         "format": "uuid"
@@ -312,22 +312,43 @@
         "nullable": true
       },
       {
-        "name": "ApplicationTarget_1",
-        "description": "1. Bewerbungsziel",
+        "name": "ApplicationTarget_1_1",
+        "description": "1. Schiene/1. Bewerbungsziel",
         "type": "string",
         "optional": true,
         "nullable": true
       },
       {
-        "name": "ApplicationTarget_2",
-        "description": "2. Bewerbungsziel",
+        "name": "ApplicationTarget_1_2",
+        "description": "1. Schiene/2. Bewerbungsziel",
         "type": "string",
         "optional": true,
         "nullable": true
       },
       {
-        "name": "ApplicationTarget_3",
-        "description": "3. Bewerbungsziel",
+        "name": "ApplicationTarget_1_3",
+        "description": "1. Schiene/3. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_2_1",
+        "description": "2. Schiene/1. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_2_2",
+        "description": "2. Schiene/2. Bewerbungsziel",
+        "type": "string",
+        "optional": true,
+        "nullable": true
+      },
+      {
+        "name": "ApplicationTarget_2_3",
+        "description": "2. Schiene/3. Bewerbungsziel",
         "type": "string",
         "optional": true,
         "nullable": true
